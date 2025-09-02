@@ -4,60 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0f19" />
-  <meta name="description" content="nexoninc.tech — site is building." />
-  <title>nexoninc.tech — Building</title>
-  <link rel="preload" href="styles.css" as="style" />
+  <title>Nexon Inc — Building the future</title>
+  <meta name="description" content="Nexon Inc builds web, software, AI, and cloud solutions."/>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%235eead4' d='M8 48V16l16 16 16-16v32L24 32 8 48z'/%3E%3C/svg%3E">
 </head>
 <body>
-  <div class="bg fx-grid"></div>
-  <div class="bg fx-grad"></div>
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
+  <div class='bg fx-grid'></div>
+  <div class='bg fx-grad'></div>
+  <div class='blob b1'></div>
+  <div class='blob b2'></div>
 
-  <header class="shell">
-    <a href="/" class="brand" aria-label="Nexon Inc Home">
-      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M8 48V16l16 16 16-16v32L24 32 8 48z" />
-      </svg>
-      <span class="brand-text">nexoninc<span class="muted">.tech</span></span>
+  <header class='shell header'>
+    <a class='brand' href='#top' aria-label='Nexon Inc home'>
+      <svg class='logo' viewBox='0 0 64 64' aria-hidden='true'><path d='M8 48V16l16 16 16-16v32L24 32 8 48z'/></svg>
+      <span class='brand-text'>nexoninc<span class='muted'>.tech</span></span>
     </a>
+    <button class='hamburger' id='navToggle' aria-controls='nav' aria-expanded='false'>☰</button>
+    <nav id='nav' class='nav' aria-label='Primary'>
+      <a href='#services'>Services</a>
+      <a href='#timeline'>Timeline</a>
+      <a href='#about'>About</a>
+      <a href='#contact' class='btn small primary'>Contact</a>
+    </nav>
   </header>
 
-  <main class="shell main">
-    <section class="card" role="region" aria-labelledby="status-title">
-      <h1 id="status-title">We are building</h1>
-      <p class="sub">The site is under active development. Check back soon.</p>
-
-      <div class="progress" aria-label="Build progress" aria-live="polite">
-        <div class="bar"><span class="fill" id="fill"></span></div>
-        <div class="pct"><span id="pct">42%</span> complete</div>
+  <main id='top'>
+    <section class='shell hero'>
+      <div class='hero-copy'>
+        <h1><span class='accent'>We build</span> web, software, and AI that ships.</h1>
+        <p class='sub'>Full‑stack engineering, research, and design. From idea to production.</p>
+        <div class='actions'>
+          <a class='btn primary' href='#services'>Explore services</a>
+          <a class='btn ghost' href='mailto:hello@nexoninc.tech'>Get a quote</a>
+        </div>
       </div>
+      <div class='hero-art' aria-hidden='true'>
+        <div class='orbs'><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
 
-      <form id="notify" class="form" autocomplete="on" aria-label="Get notified">
-        <label class="sr" for="email">Email</label>
-        <input id="email" name="email" type="email" inputmode="email" placeholder="you@example.com" required />
-        <button class="btn primary" type="submit">Notify me</button>
+    <section id='services' class='shell section'>
+      <header class='sec-head'>
+        <h2>Services</h2>
+        <p class='sub'>Everything you need to go from zero to scale.</p>
+      </header>
+      <div class='grid cards'>
+        <article class='card tilt'><h3>Web Development</h3><p>High‑performance sites and apps with modern stacks.</p><ul><li>Landing sites</li><li>SPAs</li><li>SEO</li></ul></article>
+        <article class='card tilt'><h3>Software Engineering</h3><p>APIs, microservices, and integrations for real users.</p><ul><li>Node, Python, Go</li><li>Postgres</li><li>CI/CD</li></ul></article>
+        <article class='card tilt'><h3>AI & Data</h3><p>LLMs, automation, and analytics that ship to prod.</p><ul><li>Chatbots</li><li>RAG & agents</li><li>ETL</li></ul></article>
+        <article class='card tilt'><h3>Cloud & DevOps</h3><p>Secure infra, monitoring, and zero‑downtime deploys.</p><ul><li>AWS & Vercel</li><li>Docker</li><li>Observability</li></ul></article>
+        <article class='card tilt'><h3>Mobile</h3><p>iOS/Android apps with shared code and native polish.</p><ul><li>React Native</li><li>PWA</li><li>Store launch</li></ul></article>
+        <article class='card tilt'><h3>Design</h3><p>Product, brand, and motion for clarity and impact.</p><ul><li>UI/UX</li><li>Prototyping</li><li>Design systems</li></ul></article>
+      </div>
+    </section>
+
+    <section id='timeline' class='shell section'>
+      <header class='sec-head'>
+        <h2>Timeline</h2>
+        <p class='sub'>From planning to launch to global expansion.</p>
+      </header>
+      <div class='timeline'>
+        <div class='track'>
+          <input id='tl' type='range' min='0' max='2' step='1' value='0' aria-label='Company timeline'>
+          <div class='ticks'><span>2024</span><span>2025</span><span>2026</span></div>
+        </div>
+        <div class='stages'>
+          <article class='stage' data-year='2024'><h3>Planning · 2024</h3><p>Founded, assembled core team, validated service lines.</p></article>
+          <article class='stage' data-year='2025'><h3>Launch · Oct 2025</h3><p>Public launch with flagship projects and first enterprise clients.</p></article>
+          <article class='stage' data-year='2026'><h3>Expand · 2026</h3><p>Scale delivery, open research tracks, and international ops.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id='about' class='shell section about'>
+      <header class='sec-head'>
+        <h2>Founder</h2>
+        <p class='sub'>PraJwal Nepali leads Nexon Inc with engineering focus and delivery speed.</p>
+      </header>
+      <div class='about-grid'>
+        <img class='founder' src='https://equitynepal.com/wp-content/uploads/2024/08/Prajwal-Nepali.jpeg' alt='Prajwal Nepali' loading='lazy'>
+        <div class='bio card'>
+          <h3>Who we are</h3>
+          <p>Nexon Inc is a technology studio delivering web, software, AI, and cloud solutions. We ship fast, keep quality high, and automate what can be automated.</p>
+          <p class='muted'>HQ: Remote • Serving worldwide clients.</p>
+          <div class='badges'><span>Web</span><span>Software</span><span>AI</span><span>Cloud</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id='contact' class='shell section contact'>
+      <header class='sec-head'>
+        <h2>Contact</h2>
+        <p class='sub'>Tell us what you want to build.</p>
+      </header>
+      <form class='contact-form card' onsubmit='return sendMail()'>
+        <label class='sr' for='name'>Name</label>
+        <input id='name' name='name' type='text' placeholder='Your name' required />
+        <label class='sr' for='email'>Email</label>
+        <input id='email' name='email' type='email' placeholder='you@example.com' required />
+        <label class='sr' for='msg'>Message</label>
+        <textarea id='msg' name='msg' rows='4' placeholder='What can we build for you?' required></textarea>
+        <button class='btn primary' type='submit'>Send</button>
+        <p id='contact-note' class='note' role='status' aria-live='polite'></p>
       </form>
-
-      <div class="actions">
-        <a class="btn ghost" href="mailto:hello@nexoninc.tech">Contact</a>
-        <button class="btn link" id="copy" type="button">Copy domain</button>
-      </div>
-
-      <p class="note" id="note" role="status" aria-live="polite"></p>
     </section>
   </main>
 
-  <footer class="shell foot">
-    <nav class="social" aria-label="Social links">
-      <a aria-label="Twitter/X" href="#" rel="noopener">X</a>
-      <a aria-label="Instagram" href="#" rel="noopener">IG</a>
-      <a aria-label="LinkedIn" href="#" rel="noopener">in</a>
-    </nav>
-    <small>© <span id="yr"></span> Nexon Inc</small>
+  <footer class='shell foot'>
+    <small>© <span id='yr'></span> Nexon Inc</small>
+    <nav class='social'><a href='#'>X</a><a href='#'>IG</a><a href='#'>in</a></nav>
   </footer>
 
-  <script defer src="script.js"></script>
+  <script src='script.js' defer></script>
 </body>
 </html>
