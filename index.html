@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0f19" />
+  <meta name="description" content="nexoninc.tech — site is building." />
+  <title>nexoninc.tech — Building</title>
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg fx-grid"></div>
+  <div class="bg fx-grad"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+
+  <header class="shell">
+    <a href="/" class="brand" aria-label="Nexon Inc Home">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M8 48V16l16 16 16-16v32L24 32 8 48z" />
+      </svg>
+      <span class="brand-text">nexoninc<span class="muted">.tech</span></span>
+    </a>
+  </header>
+
+  <main class="shell main">
+    <section class="card" role="region" aria-labelledby="status-title">
+      <h1 id="status-title">We are building</h1>
+      <p class="sub">The site is under active development. Check back soon.</p>
+
+      <div class="progress" aria-label="Build progress" aria-live="polite">
+        <div class="bar"><span class="fill" id="fill"></span></div>
+        <div class="pct"><span id="pct">42%</span> complete</div>
+      </div>
+
+      <form id="notify" class="form" autocomplete="on" aria-label="Get notified">
+        <label class="sr" for="email">Email</label>
+        <input id="email" name="email" type="email" inputmode="email" placeholder="you@example.com" required />
+        <button class="btn primary" type="submit">Notify me</button>
+      </form>
+
+      <div class="actions">
+        <a class="btn ghost" href="mailto:hello@nexoninc.tech">Contact</a>
+        <button class="btn link" id="copy" type="button">Copy domain</button>
+      </div>
+
+      <p class="note" id="note" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="shell foot">
+    <nav class="social" aria-label="Social links">
+      <a aria-label="Twitter/X" href="#" rel="noopener">X</a>
+      <a aria-label="Instagram" href="#" rel="noopener">IG</a>
+      <a aria-label="LinkedIn" href="#" rel="noopener">in</a>
+    </nav>
+    <small>© <span id="yr"></span> Nexon Inc</small>
+  </footer>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
