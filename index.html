@@ -1,63 +1,974 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0f19" />
-  <meta name="description" content="nexoninc.tech — site is building." />
-  <title>nexoninc.tech — Building</title>
-  <link rel="preload" href="styles.css" as="style" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="bg fx-grid"></div>
-  <div class="bg fx-grad"></div>
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexon Inc. - We build web, software, and AI that ships.</title>
 
-  <header class="shell">
-    <a href="/" class="brand" aria-label="Nexon Inc Home">
-      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M8 48V16l16 16 16-16v32L24 32 8 48z" />
-      </svg>
-      <span class="brand-text">nexoninc<span class="muted">.tech</span></span>
-    </a>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./nexonstamp.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+   href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+   rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="hero-banner.png">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#home" class="logo">
+        <span class="logo-text">NEXON INC</span>
+      </a>
+
+      <nav class="navbar" id="primary-navigation" aria-label="Primary navigation" aria-hidden="true" data-navbar>
+
+        <div class="wrapper">
+          <a href="#home" class="logo">Nexon Inc.</a>
+
+          <button class="nav-close-btn" type="button" aria-label="Close menu" aria-controls="primary-navigation"
+            aria-expanded="false" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list" role="list">
+
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="#services" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li>
+            <a href="#features" class="navbar-link" data-nav-link>Features</a>
+          </li>
+
+          <li>
+            <a href="#faq" class="navbar-link" data-nav-link>FAQ</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" type="button" aria-label="Open menu" aria-controls="primary-navigation"
+        aria-expanded="false" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="#contact" class="btn btn-cta">Let's Talk</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
   </header>
 
-  <main class="shell main">
-    <section class="card" role="region" aria-labelledby="status-title">
-      <h1 id="status-title">We are building</h1>
-      <p class="sub">The site is under active development. Check back soon.</p>
 
-      <div class="progress" aria-label="Build progress" aria-live="polite">
-        <div class="bar"><span class="fill" id="fill"></span></div>
-        <div class="pct"><span id="pct">42%</span> complete</div>
-      </div>
 
-      <form id="notify" class="form" autocomplete="on" aria-label="Get notified">
-        <label class="sr" for="email">Email</label>
-        <input id="email" name="email" type="email" inputmode="email" placeholder="you@example.com" required />
-        <button class="btn primary" type="submit">Notify me</button>
-      </form>
 
-      <div class="actions">
-        <a class="btn ghost" href="mailto:hello@nexoninc.tech">Contact</a>
-        <button class="btn link" id="copy" type="button">Copy domain</button>
-      </div>
 
-      <p class="note" id="note" role="status" aria-live="polite"></p>
-    </section>
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="hero" data-section>
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle has-before">Welcome to Our Company</p>
+
+            <h1 class="h1 hero-title">Innovating Brands. Engineering Success.</h1>
+
+            <p class="hero-text">
+              Full‑stack engineering, research, and design. From idea to production.
+            </p>
+
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Discover More</a>
+
+              <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="play" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">How it works</span>
+              </button>
+            </div>
+
+          </div>
+
+          <figure class="hero-banner has-before img-holder" style="--width: 650; --height: 650;">
+            <img src="hero-banner.png" width="650" height="650" alt="hero banner" class="img-cover">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about" data-section>
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="about-banner.png" width="802" height="654" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <h2 class="h2-sm section-title">Everything you need to go from zero to scale.</h2>
+
+            <p class="section-text">
+              We are a multidisciplinary team of product strategists, engineers, designers, and AI researchers. We help
+              startups and enterprises move from concept to production by building user-centered web and mobile products,
+              reliable backend services, and AI-enabled features that drive measurable outcomes.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="has-before">
+                End-to-end product development — from concept to scalable deployment
+              </li>
+
+              <li class="has-before">
+                Cloud-native, secure, and performance-optimized solutions
+              </li>
+
+              <li class="has-before">
+                Continuous integration & delivery pipelines for faster releases
+              </li>
+
+            </ul>
+
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Know More</a>
+
+              <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="medal-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">10+ Years Experience</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service services-grid-section" id="services" aria-labelledby="services-title" data-section>
+        <div class="container services-container">
+          <p class="section-subtitle text-center">-What We Offer-</p>
+
+          <h2 id="services-title" class="h2 section-title text-center">Our Creative Services</h2>
+
+          <p class="section-text text-center">
+            Get the most of reduction in your team’s operating costs for the whole product which creates amazing UI/UX
+            experiences.
+          </p>
+
+          <ul class="grid-list services-grid" role="list">
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-1.png" width="140" height="140" loading="lazy" alt="UI/UX Creative Design"
+                      class="img">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">UI/UX Creative Design</h3>
+
+                    <p class="card-text">
+                      We design intuitive, research-backed interfaces focused on usability and conversion — from user
+                      research and wireframes to polished, high-fidelity prototypes.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-2.png" width="140" height="140" loading="lazy" alt="App Development"
+                      class="img">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">App Development</h3>
+
+                    <p class="card-text">
+                      We build scalable web and mobile applications using modern stacks, automated testing, and CI/CD to
+                      ensure performance, reliability, and fast iteration.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-3.png" width="140" height="140" loading="lazy"
+                      alt="Professional Content Writer" class="img">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">Professional Content Writer</h3>
+
+                    <p class="card-text">
+                      Our writers craft clear, on-brand, and SEO-friendly content — from marketing copy and blog posts to
+                      product messaging and documentation.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-4.png" width="140" height="140" loading="lazy" alt="Graphic Design"
+                      class="img">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">Graphic Design</h3>
+
+                    <p class="card-text">
+                      We create cohesive visual identities and marketing assets — logos, illustrations, and campaign
+                      materials that strengthen your brand and engage customers.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-1.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for SEO &amp; Analytics -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">SEO &amp; Analytics</h3>
+
+                    <p class="card-text">
+                      Research, on-page SEO, schema, dashboards, GA4 and Search Console integration to grow traffic,
+                      measure ROI, and surface meaningful KPIs.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-2.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for E-commerce Solutions -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">E-commerce Solutions</h3>
+
+                    <p class="card-text">
+                      Storefronts, payments, inventory, and optimized checkout with secure, scalable architecture
+                      tailored to your growth plans and merchandising operations.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-3.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for Cloud &amp; DevOps -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">Cloud &amp; DevOps</h3>
+
+                    <p class="card-text">
+                      CI/CD pipelines, containerization, infrastructure as code, monitoring, and high-availability
+                      deployments keep releases fast, resilient, observable, and ready to scale.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-4.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for QA &amp; Test Automation -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">QA &amp; Test Automation</h3>
+
+                    <p class="card-text">
+                      Unit, integration, and end-to-end testing with pipelines, analytics, and dashboards deliver
+                      confident releases and traceable quality signals across teams.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="service-card-wrapper" data-service-card>
+                <div class="service-card has-after">
+
+                  <figure class="card-icon">
+                    <img src="service-1.png" width="140" height="140" loading="lazy" alt=""
+                      aria-hidden="true" class="img">
+                    <!-- TODO: Replace with dedicated illustration for Maintenance &amp; Support -->
+                  </figure>
+
+                  <div class="card-content">
+
+                    <h3 class="h3 card-title">Maintenance &amp; Support</h3>
+
+                    <p class="card-text">
+                      Proactive maintenance, performance tuning, backups, security patches, and SLA-driven support keep
+                      your products stable, compliant, and healthy after launch.
+                    </p>
+
+                    <a href="#" class="btn-link">
+                      <span class="span">Read More</span>
+
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                  </div>
+
+                </div>
+              </article>
+            </li>
+          </ul>
+
+          <a href="#" class="btn btn-primary">Get Started</a>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features" id="features" aria-label="features" data-section>
+        <div class="container">
+
+          <p class="section-subtitle text-center">-Why Choose Us-</p>
+
+          <h2 class="h2 section-title text-center">Reasons to Choose Us</h2>
+
+          <p class="section-text text-center">
+            Get the most of reduction in your team’s operating costs for the whole product which creates amazing UI/UX
+            experiences.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="01">01</data>
+
+                <h3 class="h3 card-title">Free Icon Plugin</h3>
+
+                <p class="card-text">
+                  Access a curated icon library and a simple plugin to quickly integrate icons into your designs and
+                  prototypes.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="02">02</data>
+
+                <h3 class="h3 card-title">Free 6 Month Support</h3>
+
+                <p class="card-text">
+                  Enjoy six months of complimentary technical support and maintenance after launch to ensure stability
+                  and smooth operation.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="03">03</data>
+
+                <h3 class="h3 card-title">Customer Strategy</h3>
+
+                <p class="card-text">
+                  We help define acquisition and retention strategies backed by user research and analytics to grow your
+                  customer base sustainably.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="04">04</data>
+
+                <h3 class="h3 card-title">Premium Image Assets</h3>
+
+                <p class="card-text">
+                  High-quality, license-cleared image assets and visual resources included to elevate your brand’s
+                  visuals and campaigns.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="05">05</data>
+
+                <h3 class="h3 card-title">Most Advanced Features</h3>
+
+                <p class="card-text">
+                  We build with modern, extensible architectures and integrations so your product can scale and adapt as
+                  needs evolve.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="06">06</data>
+
+                <h3 class="h3 card-title">Very Reasonable Price</h3>
+
+                <p class="card-text">
+                  Transparent pricing and flexible plans designed to deliver strong ROI while fitting your budget and
+                  roadmap.
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FAQ
+      -->
+
+      <section class="section faq" id="faq" aria-label="frequently asked questions" data-section>
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Discover Frequently Asked Questions?</h2>
+
+            <a href="#" class="btn btn-primary">Work Together</a>
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    01. Curious about how to build your own UX strategy? Here are five simple steps.
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    Start with research to understand users and context, define clear goals and success metrics,
+                    ideate and prioritize solutions, create prototypes to explore interactions, and validate with
+                    usability testing. Repeat and refine based on feedback.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    02. Where Could a Career in UX Take You? Agency vs. In-House vs. Freelance?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    Agency roles expose you to varied projects and rapid learning, in-house positions offer deeper
+                    product ownership and cross-functional collaboration, and freelance gives flexibility and
+                    entrepreneurship. Choose based on whether you prefer breadth, depth, or independence.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    03. What Is a Problem Statement in UX? (And How To Write One?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    A UX problem statement succinctly describes who the user is, what they are trying to do, the
+                    obstacle they face, and the benefit of solving it. Use the format: “(User) needs to (need) because
+                    (insight/benefit).” Keep it specific and testable.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    04. There are several techniques UX designers employ to arrive at a succinct?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    Common techniques include user interviews, surveys, analytics review, journey mapping, persona
+                    creation, rapid prototyping, and moderated usability testing. Combining qualitative and
+                    quantitative methods gives the clearest direction.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    05. What are the obstacles users are facing? What are they trying to do?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    Users commonly struggle with confusing navigation, slow performance, unclear instructions, or
+                    missing features. Identify these pain points through analytics, user sessions, and direct feedback,
+                    then prioritize fixes by user impact and implementation effort.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
   </main>
 
-  <footer class="shell foot">
-    <nav class="social" aria-label="Social links">
-      <a aria-label="Twitter/X" href="#" rel="noopener">X</a>
-      <a aria-label="Instagram" href="#" rel="noopener">IG</a>
-      <a aria-label="LinkedIn" href="#" rel="noopener">in</a>
-    </nav>
-    <small>© <span id="yr"></span> Nexon Inc</small>
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top section" id="contact" data-section>
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Nexon Inc.</a>
+
+          <p class="footer-text">
+            Nexon Inc. designs and builds web, software, and AI products. We combine strategy, engineering, and design
+            to deliver reliable, user-centered solutions that help businesses grow.
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+
+            <button type="submit" class="form-btn">
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Strategy & Research</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Web Solution</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Digital Merketing</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">App Design</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">App Development</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Company</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our Services</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our Portfolio</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our Blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Latest News</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="location" aria-hidden="true"></ion-icon>
+
+            <address class="contact-link address">
+             Budhanilkantha-11, Kathmandu
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+            <a href="tel:+9779763607255" class="contact-link">+9779763607255</a>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+
+            <a href="mailto:info@Nexon Inc..com" class="contact-link">info@nexoninc.tech</a>
+          </li>
+
+          <li class="footer-item">
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2025 Nexon Inc. | All Rights Reserved by <a href="#" class="copyright-link">NexonInc</a>
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Terms of Use</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
   </footer>
 
-  <script defer src="script.js"></script>
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
